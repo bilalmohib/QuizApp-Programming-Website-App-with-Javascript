@@ -49,7 +49,7 @@ body.wrong{
 
 #top
 {
-    width: fit-content;
+    min-width: 100%;
     font-size: 45px;
     display: none;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
