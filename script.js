@@ -1,6 +1,6 @@
 alert("Please Click on the submit button after ten questions are finished"+
 " and restart button appears to save your score permanently.It will never be "+
-" Shared with any website.Other than this.Do you agree?");
+" Shared with any website.Other than this.Do you agree?Dont mention your email if you dont want.");
 
 const startButton = document.getElementById('start-btn');
 const nextButtton = document.getElementById('next-btn');
@@ -144,9 +144,9 @@ function submit()
 {
     alert(countRightAnswers);
     var name=prompt("Enter you name: ");
-    var email=prompt("Enter you email: ");
+    var email=prompt("Enter you email(Optional): ");
     var opinion=prompt("Enter you opinion about the quiz: ");
-    while(name==""||email==""||opinion=="")
+    while(name==""||opinion=="")
     {
         alert("Please fill these fields so that I now that who are you?");
         var name=prompt("Enter you name: ");
