@@ -3,7 +3,9 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-
+p{
+    margin-top: 10%;
+}
 body{
     padding: 0;
     margin: 0;
@@ -11,7 +13,11 @@ body{
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background-color: darkcyan;
+    background: url(Images/back.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 #submit{
     display: none;
@@ -22,12 +28,12 @@ text-shadow: 2px 2px 2px green;
 }
 #answer-buttons
 {
-    min-width: fit-content;
+    min-width: 90%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-flow: wrap;
-    height: fit-content;
+    height: auto;
 }
 /* 
 body.correct{
@@ -49,13 +55,12 @@ body.wrong{
 
 #top
 {
-    min-width: 100%;
-    font-size: 45px;
+    width: fit-content;
+    font-size: 30px;
     display: none;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-shadow: 2px 2px 2px blue;
     border-bottom: 1px solid black;
-    border: 1px solid blue;
 }
 .container{
     min-width: 300px;
@@ -66,7 +71,13 @@ body.wrong{
     height: fit-content;
     font-size: 50px;
     padding: 10px;
+    top: 10%;
     box-shadow: 0 0 10px 2px blue;
+    background-image: url(Images/images.jfif);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .btn-grid{
@@ -75,23 +86,26 @@ body.wrong{
     gap: 10px;
     margin: 20px 0;
 }
-
+#question
+{
+    font-size: 30px;
+}
 .btn{
-    background-color: rgb(125, 136, 199);
+    background-color: rgb(61, 78, 182);
     border: 1px solid hsl(var(--hue),100%, 30%);
     padding: 5px 10px;
-    width: 300px;
+    width: 400px;
     height: auto;
-    color: rgb(39, 114, 10);
+    color: rgb(243, 247, 241);
     outline: none;
-    font-size: 40px;
+    font-size: 30px;
     border-radius: 5%;
 }
 
 .btn:hover{
     border-color: black;
     background-color: rgb(16, 15, 105);
-    font-size: 40px;
+    font-size: 30px;
     color: rgba(245, 248, 248, 0.87);
 }
 
@@ -108,7 +122,8 @@ body.wrong{
     font-size: 1.5rem;
     font-weight: bold;
     padding: 10px 20px;
-    border-radius: 50%;
+    border-radius: 1%;
+    width: 200px;
 }
 
 .controls{
@@ -125,12 +140,14 @@ body.wrong{
     display: none;
     text-align: center;
     margin-left: 10%;
+    font-size: 25px;
 }
 #hd
 {
     display: none;
     font-weight: bolder;
     color: green;
+    font-size: 30px;
     text-shadow: 2px 2px 2px black;
 }
 #score
@@ -140,12 +157,16 @@ body.wrong{
     margin-left: 40px;
 
 }
+#next-btn{
+    margin-right: 30px;
+}
 #scorechange{
     color: black;
     text-shadow: 2px 2px 2px blue;
 }
 #hours{
     display: inline-block;
+    font-size: 25px;
 }
 .End{
     background-color: red;
