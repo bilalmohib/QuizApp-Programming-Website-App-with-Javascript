@@ -1,7 +1,8 @@
 alert("Please Click on the submit button after ten questions are finished"+
 " and restart button appears to save your score permanently.It will never be "+
 " Shared with any website.Other than this.Do you agree?");
-
+document.getElementById("btn1").disabled = true;
+     
 const startButton = document.getElementById('start-btn');
 const nextButtton = document.getElementById('next-btn');
 const questionContainerElement = document.getElementById('question-container');
@@ -40,7 +41,7 @@ var msec=0;
 let shuffledQuestions,currentQuestionIndex;
 
 startButton.addEventListener('click',startGame);
-nextButtton.addEventListener('click',()=>{
+answerButtonsElement.addEventListener('click',()=>{
     currentQuestionIndex++;
     setNextQuestion();
 })
@@ -81,6 +82,7 @@ function startGame()
 
 function setNextQuestion()
 {
+    
     resetState();
     showQuestion(shuffledQuestions[currentQuestionIndex]);
 
@@ -99,6 +101,8 @@ function showQuestion(question){
      }        
      button.addEventListener('click',selectAnswer);
      answerButtonsElement.appendChild(button);
+     document.getElementById("answer-buttons").disabled = true;
+     
     });
 }
 
@@ -115,6 +119,7 @@ function resetState()
 
 function selectAnswer(e)
 {
+    document.getElementById("answer-buttons").disabled = true;
      const selectedButton = e.target;
      const correct = selectedButton.dataset.correct;
      setStatusClass(document.body,correct);
@@ -186,6 +191,7 @@ function setStatusClass(element,correct)
     else{
         element.classList.add('wrong');
     }
+    document.getElementById("answer-buttons").disabled = true;
 }
 
 function clearStatusClass(element)
